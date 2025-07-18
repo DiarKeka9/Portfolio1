@@ -1,6 +1,8 @@
-const button = document.getElementById('changeColor');
-
-button.addEventListener('click', () => {
-  const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-  document.body.style.backgroundColor = randomColor;
-});
+function updateClock() {
+    const now = new Date();
+    const time = now.toLocaleTimeString();
+    document.getElementById('clock').textContent = time;
+  }
+  setInterval(updateClock, 1000);
+  updateClock();
+  
